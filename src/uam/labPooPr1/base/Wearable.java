@@ -23,6 +23,7 @@ public class Wearable extends Dispositivo{
     }
 
     public Wearable(String marca, String modelo, Double precio, String descripcion, String color,String numeroSerie, String tipoInterfazCarga, String tipoMaterial) {
+        horaFecha = new Date(); 
         this.marca = marca; 
         this.modelo = modelo; 
         this.precio = precio; 
