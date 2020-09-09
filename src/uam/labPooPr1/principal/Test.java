@@ -24,6 +24,15 @@ public class Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------- FUNCIONAMIENTO DE LA CLASE TEST -------------------------------------------------------------------
+        /*  A continuación generaremos 2 objetos de cada clase. El objetivo es crear 2 celulares, 2 tablets y 2 wearables, crearemos 2 catalogos en, cada 
+            catalogo contendrá 1 dispositivo de cada tipo, después crearemos dos tiendas, con el proposito de demostrar que cada tienda puede tener un 
+            catalogo de productos. Para mostrar el funcionamiento de las tiendas creamos 2 clientes, uno para cada tienda y después procedemos a la 
+            creacion de dos ventas, dichas ventas se agregan al registro de ventas de cada tienda. 
+        */
+        
+        
         // Genermaos un celular con el primer constructor
         Celular celular1 = new Celular(); 
         celular1.setMarca("Huawei");
@@ -131,8 +140,28 @@ public class Test {
         //generamos la venta y la asignamos al regustro de vantas de la segunda tienda
         tienda2.crearVenta(venta2.generarVenta());
         
-        System.out.println("-------------------------------");
+        
+        // DESPLEGAMOS EL CATALOGO DE LA PRIMERA TIENDA 
+        System.out.println("***************************************************** TIENDA 1 *****************************************************");
+        //informacion sobre la tienda 
+        System.out.println(tienda1.toString());
+        System.out.println("\nCATALOGO: \n");
+        tienda1.mostrarCatalogo();
+        
+        //DESPLEGAMOS EL REGISTRO DE VENTAS DE LA TIENDA 1
+        System.out.println("\n\nREGISTRO DE VANTEAS: \n");
+        tienda1.mostrarVentas();
+        
+         // DESPLEGAMOS EL CATALOGO DE LA TIENDA 2
+        System.out.println("\n\n***************************************************** TIENDA 2 *****************************************************");
+         //informacion sobre la tienda 
+        System.out.println(tienda1.toString());
+        System.out.println("\nCATALOGO: \n");
         tienda2.mostrarCatalogo();
+        
+        //DESPLEGAMOS EL REGISTRO DE VENTAS DE LA TIENDA 2
+        System.out.println("\n\nREGISTRO DE VANTEAS: \n");
+        tienda2.mostrarVentas();
     }
     
 }

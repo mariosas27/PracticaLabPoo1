@@ -38,6 +38,7 @@ public class Tienda {
     
     public void  mostrarVentas(){
         System.out.println("Ventas: ");
+        System.out.println("-----------------------------------------");
         for(Venta venta : registroVentas){
             System.out.println(venta.toString());
         }
@@ -45,6 +46,6 @@ public class Tienda {
     
     @Override
     public String toString(){
-        return null; 
+        return "\nLa tienda tiene un catalogo que cuenta con un total de " + this.catalogo.getTotalProductos() + " productos\ny un total de " + this.registroVentas.size() + " ventas"; 
     }
 }

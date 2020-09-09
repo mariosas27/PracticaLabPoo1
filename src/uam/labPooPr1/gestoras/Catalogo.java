@@ -25,6 +25,9 @@ public class Catalogo {
     public void agregarProducto(Dispositivo producto){
         this.productos.add(producto);
     }
+    public int getTotalProductos(){
+        return productos.size(); 
+    }
     
     public void mostrarCatalogo(){
         System.out.println("A continuación se muestran los productos: ");
